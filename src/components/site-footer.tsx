@@ -32,8 +32,8 @@ export function SiteFooter() {
       {/* Top rule */}
       <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#7d4d42]/55 to-transparent" />
 
-      {/* Decorative motifs */}
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+      {/* Decorative motifs — hidden on mobile to avoid overflow into content */}
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden sm:block">
         <div className="absolute -left-16 top-10 h-64 w-64 rounded-full bg-[#7d4d42]/8 blur-3xl" />
         <div className="absolute right-0 bottom-20 h-52 w-52 rounded-full bg-[#6f7b56]/6 blur-3xl" />
         <div className="absolute left-[6%] top-[20%] h-20 w-20 rounded-full border border-[#d9c7b0]/8" />
