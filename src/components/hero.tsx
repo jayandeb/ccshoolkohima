@@ -9,7 +9,7 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-x-0 top-0 h-52 bg-gradient-to-b from-[#fbf6ed] via-[#fbf6ed]/82 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white/72 to-transparent" />
 
-      <div className="relative z-10 flex min-h-screen flex-col">
+      <div className="relative z-10 flex flex-col md:min-h-screen">
         <HeroNav />
 
         <main className="relative flex flex-1 flex-col px-6 pb-0 sm:px-8 lg:px-8">
