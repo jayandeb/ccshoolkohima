@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
 import { ColorRevealText } from "@/components/color-reveal-text";
+import { Hero } from "@/components/hero";
+import { BackupHero } from "@/components/backup-hero";
 import { LoadingScreen } from "@/components/loading-screen";
 import { SiteFooter } from "@/components/site-footer";
 import { Button } from "@/components/ui/button";
@@ -13,14 +15,6 @@ import {
   HoverCard,
 } from "@/components/ui/motion-primitives";
 import { StoryMapSection } from "@/components/story-map-section";
-
-const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Our Approach", href: "#philosophy" },
-  { label: "Programmes", href: "#programmes" },
-  { label: "Campus Journey", href: "#journey" },
-  { label: "For Parents", href: "#parents" },
-];
 
 const pillars = [
   {
@@ -80,7 +74,6 @@ const researchPoints = [
 ];
 
 function App() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [appReady, setAppReady] = useState(false);
 
   return (
@@ -91,127 +84,8 @@ function App() {
         )}
       </AnimatePresence>
 
-      {/* ── Hero ──────────────────────────────────────────────────────────── */}
-      <section className="relative isolate min-h-screen overflow-hidden" id="home">
-        <video
-          autoPlay
-          className="absolute inset-0 z-0 h-full w-full object-cover"
-          loop
-          muted
-          preload="auto"
-          playsInline
-        >
-          <source src="/images/hero-classroom.mp4" type="video/mp4" />
-        </video>
-        <div className="absolute inset-x-0 bottom-0 z-0 h-48 bg-gradient-to-t from-white via-white/85 via-40% to-transparent" />
-
-        <div className="relative z-10 flex min-h-screen flex-col">
-          {/* Nav */}
-          <header className="relative z-20 px-4 pt-4 sm:px-6 lg:px-8">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between rounded-full border border-[#e7ded1] bg-white px-4 py-2 shadow-[0_16px_34px_rgba(61,53,32,0.08)] sm:px-5">
-              <a className="flex items-center gap-3 text-foreground" href="#home">
-                <img
-                  alt="Children's Christian School crest"
-                  className="h-10 w-10 object-contain"
-                  src="/images/ccs-logo.png"
-                />
-                <span
-                  className="hidden text-lg tracking-tight md:block"
-                  style={{ fontFamily: "'Fraunces', serif" }}
-                >
-                  CCS Montessori
-                </span>
-              </a>
-
-              <div className="hidden items-center gap-5 md:flex">
-                {navLinks.map((link) => (
-                  <a
-                    className="nav-link-desktop relative text-sm font-semibold text-foreground/75 transition-colors hover:text-foreground"
-                    href={link.href}
-                    key={link.label}
-                    style={{ fontFamily: "'Fraunces', serif" }}
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
-
-              <Button
-                asChild
-                className="hidden px-4 py-1.5 text-sm shadow-none md:inline-flex"
-                variant="solid"
-              >
-                <a href="#admissions">Apply Now</a>
-              </Button>
-
-              <button
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle menu"
-                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[#e7ded1] bg-[#f8f2e7] text-foreground md:hidden"
-                onClick={() => setMobileMenuOpen((o) => !o)}
-                type="button"
-              >
-                <span className="relative block h-3.5 w-4">
-                  <span className={`absolute left-0 top-0 h-[1.5px] w-4 bg-current transition-transform duration-300 ${mobileMenuOpen ? "translate-y-[6px] rotate-45" : ""}`} />
-                  <span className={`absolute left-0 top-[6px] h-[1.5px] w-4 bg-current transition-opacity duration-300 ${mobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
-                  <span className={`absolute left-0 top-[12px] h-[1.5px] w-4 bg-current transition-transform duration-300 ${mobileMenuOpen ? "-translate-y-[6px] -rotate-45" : ""}`} />
-                </span>
-              </button>
-            </nav>
-
-            <AnimatePresence>
-              {mobileMenuOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: -8, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -8, scale: 0.97 }}
-                  transition={{ duration: 0.22, ease: [0.16, 1, 0.3, 1] }}
-                  className="absolute left-4 right-4 top-full z-30 mt-3 rounded-[1.75rem] border border-[#e7ded1] bg-white px-5 py-5 shadow-[0_18px_40px_rgba(61,53,32,0.1)] md:hidden sm:left-6 sm:right-6"
-                >
-                  <div className="flex flex-col gap-2">
-                    {navLinks.map((link) => (
-                      <a
-                        className="rounded-2xl px-3 py-3 text-base font-semibold text-foreground/88 transition-colors hover:bg-[#f7efe3] hover:text-foreground"
-                        href={link.href}
-                        key={link.label}
-                        onClick={() => setMobileMenuOpen(false)}
-                        style={{ fontFamily: "'Fraunces', serif" }}
-                      >
-                        {link.label}
-                      </a>
-                    ))}
-                    <a
-                      className="mt-1 rounded-2xl bg-primary px-3 py-3 text-base font-semibold text-primary-foreground"
-                      href="#admissions"
-                      onClick={() => setMobileMenuOpen(false)}
-                      style={{ fontFamily: "'Fraunces', serif" }}
-                    >
-                      Apply Now
-                    </a>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-          </header>
-
-          {/* Hero text */}
-          <main className="flex flex-1 items-start px-6 pb-12 pt-16 sm:px-8 sm:pt-20 lg:pb-16 lg:pt-24">
-            <div className="mx-auto w-full max-w-7xl">
-              <div className="mx-auto max-w-4xl text-center">
-                <p className="animate-fade-rise text-xs uppercase tracking-[0.32em] text-[#6f4a3f] sm:text-sm">
-                  Montessori in Kohima
-                </p>
-                <h1
-                  className="animate-fade-rise-delay mt-4 text-4xl font-medium leading-[0.92] tracking-[-0.02em] text-[#5b3a34] drop-shadow-[0_10px_24px_rgba(255,248,240,0.35)] sm:text-5xl lg:text-[5.5rem]"
-                  style={{ fontFamily: "'Fraunces', serif" }}
-                >
-                  A warm beginning for thoughtful children.
-                </h1>
-              </div>
-            </div>
-          </main>
-        </div>
-      </section>
+      <Hero />
+      {/* <BackupHero /> */}
 
       {/* ── Philosophy ────────────────────────────────────────────────────── */}
       <section className="px-6 py-16 sm:py-20 lg:px-8 lg:py-24" id="philosophy">

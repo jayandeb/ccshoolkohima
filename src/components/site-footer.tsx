@@ -162,12 +162,17 @@ export function SiteFooter() {
           <p className="text-xs text-white/25">
             © {new Date().getFullYear()} Children's Christian School, Kohima. All rights reserved.
           </p>
-          <p
-            className="text-xs tracking-[0.18em] text-white/18 uppercase"
-            style={{ fontFamily: "'Fraunces', serif" }}
-          >
-            Est. 1957 · For God and My Country
-          </p>
+          <div className="flex flex-col gap-1 sm:items-end">
+            <p
+              className="text-xs tracking-[0.18em] text-white/18 uppercase"
+              style={{ fontFamily: "'Fraunces', serif" }}
+            >
+              Est. 1957 · For God and My Country
+            </p>
+            <p className="text-xs text-white/20">
+              Powered by <span className="text-white/35 font-medium">NagaEd</span>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
