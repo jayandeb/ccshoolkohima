@@ -148,7 +148,7 @@ export function SiteFooter() {
                 "We are all born intelligent — we simply learn in different ways."
               </p>
               <p className="mt-2.5 text-[10px] uppercase tracking-[0.22em] text-white/25">
-                CCS Montessori Prospectus
+                CCS Montessori
               </p>
             </div>
           </motion.div>

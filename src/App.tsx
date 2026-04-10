@@ -67,7 +67,7 @@ const parentGuidance = [
 ];
 
 const researchPoints = [
-  { value: "2023", label: "Recent research reviews cited in the prospectus" },
+  { value: "2023", label: "Recent research reviews supporting our approach" },
   { value: "3-Year", label: "Age-span classrooms that support peer learning" },
   { value: "1:1", label: "Observation-led assessment between guide and child" },
   { value: "AMI", label: "Montessori leadership connected to AMI practice" },
@@ -104,9 +104,8 @@ function App() {
               </em>
             </h2>
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
-              The prospectus repeatedly returns to the same promise: every child is capable, every
-              child deserves dignity, and learning becomes deeper when it is active, peaceful, and
-              self-directed.
+              At CCS Montessori, every child is capable, every child deserves dignity, and learning
+              becomes deeper when it is active, peaceful, and self-directed.
             </p>
           </FadeUp>
 
@@ -242,9 +241,9 @@ function App() {
               </em>
             </h2>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base lg:text-lg">
-              The prospectus gives parents practical ways to support a healthy Montessori
-              transition: routines, calm separation, real work at home, and a shared commitment to
-              courtesy and order.
+              We believe home and school work best together. Here are practical ways to support a
+              healthy Montessori transition: routines, calm separation, real work at home, and a
+              shared commitment to courtesy and order.
             </p>
           </SlideIn>
 
