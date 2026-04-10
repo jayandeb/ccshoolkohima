@@ -13,8 +13,8 @@ export function Hero() {
         <HeroNav />
 
         <main className="relative flex flex-1 flex-col px-6 pb-0 sm:px-8 lg:px-8">
-          {/* Text — vertically centered in remaining space on mobile, top-aligned on desktop */}
-          <div className="relative z-20 mx-auto flex w-full max-w-7xl flex-1 items-center justify-center lg:flex-none lg:items-start lg:pt-16">
+          {/* Text */}
+          <div className="relative z-20 mx-auto w-full max-w-7xl pt-8 sm:pt-12 lg:pt-16">
             <div className="mx-auto max-w-4xl text-center">
               <p className="animate-fade-rise text-xs uppercase tracking-[0.32em] text-[#6f4a3f] sm:text-sm">
                 Montessori in Kohima
@@ -32,11 +32,18 @@ export function Hero() {
             </div>
           </div>
 
-          {/* Image — anchored to bottom on mobile, overlaps text on desktop */}
-          <div className="relative left-1/2 z-10 w-screen -translate-x-1/2 md:-mt-8 lg:-mt-32">
+          {/* Image — fills remaining space on mobile, overlaps text on desktop */}
+          <div className="relative left-1/2 z-10 mt-6 flex flex-1 w-screen -translate-x-1/2 md:flex-none md:-mt-8 lg:-mt-32">
+            {/* Mobile image */}
             <img
               alt="CCS Montessori hero"
-              className="h-80 w-full object-cover object-top sm:h-96 md:h-auto md:object-contain md:object-center"
+              className="h-full w-full object-cover object-top md:hidden"
+              src="/images/heroimagemobile.png"
+            />
+            {/* Desktop image */}
+            <img
+              alt="CCS Montessori hero"
+              className="hidden h-auto w-full object-contain object-center md:block"
               src="/images/heroimage.png"
             />
           </div>

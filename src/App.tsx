@@ -194,7 +194,7 @@ function App() {
                   Evidence, observation, and a classroom built for deep work.
                 </h2>
                 <p className="mt-4 max-w-xl text-sm leading-relaxed text-foreground/70 sm:text-base">
-                  The brochure highlights research reviews from 2023, individual observation, and
+                  Our approach draws on research reviews from 2023, individual observation, and
                   mastery shown through practice rather than marks alone.
                 </p>
               </div>
