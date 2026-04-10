@@ -2,16 +2,16 @@ import { motion } from "framer-motion";
 
 const footerLinks = [
   { label: "Home", href: "#home" },
-  { label: "Philosophy", href: "#philosophy" },
+  { label: "Our Approach", href: "#philosophy" },
   { label: "Programmes", href: "#programmes" },
-  { label: "Journey", href: "#journey" },
-  { label: "Parents", href: "#parents" },
+  { label: "Campus Journey", href: "#journey" },
+  { label: "For Parents", href: "#parents" },
   { label: "Admissions", href: "#admissions" },
 ];
 
 const affiliations = [
   { abbr: "AMI", full: "Association Montessori Internationale" },
-  { abbr: "NILSR", full: "Nagaland Institute of Language Studies & Research" },
+  { abbr: "IMF", full: "Indian Montessori Foundation", href: "https://montessori-india.org/" },
 ];
 
 const expo = [0.16, 1, 0.3, 1] as const;
@@ -127,7 +127,18 @@ export function SiteFooter() {
                   <span className="mt-0.5 inline-flex shrink-0 rounded bg-white/8 px-1.5 py-0.5 text-[10px] font-semibold uppercase tracking-wider text-[#c4a882]">
                     {a.abbr}
                   </span>
-                  <span className="text-sm leading-relaxed text-white/40">{a.full}</span>
+                  {"href" in a ? (
+                    <a
+                      className="text-sm leading-relaxed text-white/40 transition-colors hover:text-white"
+                      href={a.href}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      {a.full}
+                    </a>
+                  ) : (
+                    <span className="text-sm leading-relaxed text-white/40">{a.full}</span>
+                  )}
                 </li>
               ))}
             </ul>

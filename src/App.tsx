@@ -16,10 +16,10 @@ import { StoryMapSection } from "@/components/story-map-section";
 
 const navLinks = [
   { label: "Home", href: "#home" },
-  { label: "Philosophy", href: "#philosophy" },
+  { label: "Our Approach", href: "#philosophy" },
   { label: "Programmes", href: "#programmes" },
-  { label: "Journey", href: "#journey" },
-  { label: "Parents", href: "#parents" },
+  { label: "Campus Journey", href: "#journey" },
+  { label: "For Parents", href: "#parents" },
 ];
 
 const pillars = [
