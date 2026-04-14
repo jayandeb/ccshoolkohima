@@ -86,6 +86,7 @@ function App() {
 
       {/* <Hero /> */}
       <BackupHero />
+      
 
       {/* ── Philosophy ────────────────────────────────────────────────────── */}
       <section className="px-6 py-16 sm:py-20 lg:px-8 lg:py-24" id="philosophy">
