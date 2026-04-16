@@ -288,6 +288,11 @@ function App() {
                 </Button>
               </motion.div>
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
+                <Button asChild size="base" variant="hero">
+                  <a href="mailto:info@ccsnagaland.in">info@ccsnagaland.in</a>
+                </Button>
+              </motion.div>
+              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
                 <Button asChild className="bg-white text-[#7d4d42] hover:bg-white/90" size="base">
                   <a href="#home">Back to Top</a>
                 </Button>

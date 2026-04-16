@@ -96,6 +96,17 @@ export function SiteFooter() {
                   +91 8787781106
                 </span>
               </a>
+
+              <a href="mailto:info@ccsnagaland.in" className="group flex items-center gap-3">
+                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 text-white/35 transition-colors group-hover:border-[#c4856a]/45 group-hover:text-[#c4856a]">
+                  <svg viewBox="0 0 16 16" fill="currentColor" className="h-3 w-3">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+                  </svg>
+                </div>
+                <span className="text-sm text-white/45 transition-colors group-hover:text-[#c4856a]">
+                  info@ccsnagaland.in
+                </span>
+              </a>
             </div>
           </motion.div>
 
